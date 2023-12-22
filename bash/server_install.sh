@@ -14,7 +14,7 @@ cd /
 
 #mc directories
 mkdir mc_server
-mdkir mc_server/data
+mkdir mc_server/data
 mkdir /mc_server/data/mods
 mkdir /mc_server/data/config
 
