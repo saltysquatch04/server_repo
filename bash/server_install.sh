@@ -14,11 +14,12 @@ cd /
 
 #mc directories
 mkdir mc_server
-mkdir mc_server/data/mods
-mkdir mc_server/data/config
+mkdir /mc_server/data/mods
+mkdir /mc_server/data/config
 
 #create docker containers
 cd ~
+echo $(pwd)
 # docker compose -f "server_repo/docker/portainer.yml" -f "server_repo/docker/media_server.yml" up -d
 docker compose -f "server_repo/docker/portainer.yml" up -d
 docker compose -f "server_repo/docker/mc_server.yml" up -d
