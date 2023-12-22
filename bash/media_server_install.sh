@@ -11,5 +11,5 @@ mkdir /media_server/media/movies
 mkdir /media_server/media/tv
 
 #create docker containers
-docker compose -f "../docker/media_server.yml" up
+docker compose -f "media_server.yml" up
 
