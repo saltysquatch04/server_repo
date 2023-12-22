@@ -24,5 +24,9 @@ mkdir mc_server/data
 # # docker compose -f "/home/aedan/server_repo/docker/media_server.yml" up -d
 docker compose -f "/home/aedan/server_repo/docker/mc_server.yml" up -d
 
+while [ "$( docker ps | grep mc | awk '{print $7}' )" != "Up" ]
+do
+done
+
 #copying mods to correct directory
 cp /home/aedan/server_repo/mods/* /mc_server/data/mods
