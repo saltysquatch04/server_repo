@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   mc:
+    container_name: mc
     image: itzg/minecraft-server
     environment:
       EULA: "true"
