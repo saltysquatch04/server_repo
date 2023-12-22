@@ -20,5 +20,6 @@ mkdir mc_server/data/config
 #create docker containers
 cd ~
 # docker compose -f "server_repo/docker/portainer.yml" -f "server_repo/docker/media_server.yml" up -d
+docker compose -f "server_repo/docker/portainer.yml" up -d
 docker compose -f "server_repo/docker/mc_server.yml" up -d
 
