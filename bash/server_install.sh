@@ -27,7 +27,7 @@ docker compose -f "/home/aedan/server_repo/docker/mc_server.yml" up -d
 if [[ "$( docker ps | grep mc | awk '{print $7}' )" != "Up" ]]:
 then
     echo true
-
+fi
 
 # while [ "$( docker ps | grep mc | awk '{print $7}' )" != "Up" ];
 # do 
