@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# #making directories
+#moving to root
 cd /
 
 # #media_server directories
@@ -15,8 +15,11 @@ cd /
 #mc directories
 mkdir mc_server
 mkdir mc_server/data
-mkdir /mc_server/data/mods
-mkdir /mc_server/data/config
+# mkdir /mc_server/data/mods
+# mkdir /mc_server/data/config
+
+#copying mods to correct directory
+cp /home/aedan/server_repo/mods/* /mc_server/data/mods
 
 #create docker containers
 docker volume create portainer_data
