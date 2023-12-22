@@ -13,15 +13,15 @@ cd /
 # mkdir /media_server/media/tv
 
 #mc directories
-mkdir mc_server
-mkdir mc_server/data
-mkdir /mc_server/data/mods
-mkdir /mc_server/data/config
+# mkdir mc_server
+# mkdir mc_server/data
+# mkdir /mc_server/data/mods
+# mkdir /mc_server/data/config
 
 #create docker containers
 # docker compose -f "/home/aedan/server_repo/docker/portainer.yml" -f "/home/aedan/server_repo/docker/media_server.yml" up -d
 # docker compose -f "/home/aedan/server_repo/docker/portainer.yml" up -d
 docker volume create portainer_data
 docker run -d -p 9000:9000 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
-docker compose -f "/home/aedan/server_repo/docker/mc_server.yml" up -d
+# docker compose -f "/home/aedan/server_repo/docker/mc_server.yml" up -d
 
