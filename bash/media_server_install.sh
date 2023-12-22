@@ -10,6 +10,8 @@ mkdir /media_server/media
 mkdir /media_server/media/movies
 mkdir /media_server/media/tv
 
+
+echo $(pwd)
 #create docker containers
 docker compose -f "media_server.yml" up
 
