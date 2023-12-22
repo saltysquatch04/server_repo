@@ -7,9 +7,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=US/Eastern
     volumes:
-      - /path/to/data:/config
+      - /media_server/appdata/config/prowlarr:/config
     ports:
       - 9696:9696
     restart: unless-stopped
