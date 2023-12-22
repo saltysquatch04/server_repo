@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # #making directories
-# cd /
+cd /
 
 # #media_server directories
 # mkdir media_server
