@@ -24,9 +24,10 @@ mkdir mc_server/data
 # # docker compose -f "/home/aedan/server_repo/docker/media_server.yml" up -d
 docker compose -f "/home/aedan/server_repo/docker/mc_server.yml" up -d
 
+echo "Waiting..."
 sleep 120
 
-copying mods to correct directory
+#copying mods to correct directory
 cp /home/aedan/server_repo/mods/* /mc_server/data/mods
 
-echo "Setup Complete " + "(" + $SECONDS + " seconds)" 
+echo "Setup Complete ($SECONDS seconds)"
