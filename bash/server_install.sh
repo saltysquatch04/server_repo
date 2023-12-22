@@ -30,4 +30,4 @@ sleep 120
 #copying mods to correct directory
 cp /home/aedan/server_repo/mods/* /mc_server/data/mods
 
-echo "Setup Complete ($SECONDS seconds)"
+echo "Setup Complete."
