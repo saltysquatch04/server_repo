@@ -88,6 +88,7 @@ services:
       - 8096:8096
     restart: unless-stopped
 
+---
 version: "3.4"
 services:
   requestrr:
