@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+    filecloud.mongodb:
+        container_name: 'filecloud.mongodb'
+        image: mongo:6.0.8
+        environment:
+            - mongodb_data_container=/data/db
+        volumes:
+            - mongo_database:/data/db
+
+    filecloud.server:
+        container_name: 'filecloud.server'
+        image: filecloud/filecloudserver23.1:latest
+        depends_on:
+            - filecloud.mongodb
+            - filecloud.preview
+        volumes:
+            - cloud_data:/var/clouddata
+            - var_html:/var/www/html
+        links:
+            - filecloud.mongodb
+        ports:
+            - "80:80"
+            - "443:443"
+
+volumes:
+    mongo_database:
+    cloud_data:
+    var_html:
