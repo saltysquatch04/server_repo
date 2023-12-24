@@ -21,7 +21,7 @@ docker volume create portainer_data
 docker run -d -p 9000:9000 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 # docker compose -f "/home/aedan/server_repo/docker/media_server.yml" up -d
 # docker compose -f "/home/aedan/server_repo/docker/mc_server.yml" up -d
-docker compose -f "/home/aedan/server_repo/docker/mc_server.yml" up -d
+docker compose -f "/home/aedan/server_repo/docker/filecloud.yml" up -d
 
 # echo "Waiting..."
 # sleep 120
