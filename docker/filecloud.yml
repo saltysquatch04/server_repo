@@ -24,7 +24,22 @@ services:
             - "80:80"
             - "443:443"
 
+    filecloud.preview:
+        container_name: 'filecloud.preview'
+        image: filecloud/filecloudpreview22.1:latest
+        volumes:
+            - cloud_data:/var/clouddata
+            - var_html:/var/www/html
+
+    filecloud.solr:
+        container_name: 'filecloud.solr'
+        image: filecloud/filecloudsolr21.3:latest
+        volumes:
+            - solr_data:/var/solr
+            - var_html:/var/www/html
+
 volumes:
     mongo_database:
     cloud_data:
+    solr_data:
     var_html:
